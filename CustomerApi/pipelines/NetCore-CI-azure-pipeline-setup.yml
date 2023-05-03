@@ -22,7 +22,7 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'runtime'
-    version: 'netcoreapp3.1'
+    version: 'netcoreapp3.x'
     includePreviewVersions: true
     performMultiLevelLookup: true
 - task: DotNetCoreCLI@2
