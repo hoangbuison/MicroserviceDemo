@@ -19,17 +19,17 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/CustomerApi*.csproj'
+  displayName: 'Restore Nuget Packages'
 - task: UseDotNet@2
   inputs:
     packageType: 'runtime'
     version: '3.x'
     includePreviewVersions: true
     performMultiLevelLookup: true
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    projects: '**/CustomerApi*.csproj'
-  displayName: 'Restore Nuget Packages'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
