@@ -19,10 +19,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+- task: UseDotNet@2
   inputs:
-    versionSpec: '3.x'
-    checkLatest: true
+    packageType: 'sdk'
+    version: '3.x'
+    includePreviewVersions: true
+    performMultiLevelLookup: true
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
