@@ -19,19 +19,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: UseDotNet@2
-  displayName: 'Install .NET Core SDK'
+- task: NuGetToolInstaller@1
   inputs:
-    version: 3.x
-    performMultiLevelLookup: true
-    includePreviewVersions: true # Required for preview versions
-
-- task: UseDotNet@2
-  displayName: 'Install .NET Core SDK'
-  inputs:
-    version: 6.x
-    performMultiLevelLookup: true
-    includePreviewVersions: true # Required for preview versions
+    versionSpec: '3.x'
+    checkLatest: true
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
