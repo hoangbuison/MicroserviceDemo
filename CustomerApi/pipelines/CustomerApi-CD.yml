@@ -3,7 +3,7 @@ trigger: none
 resources:
   containers:
   - container: linuxsqlpackage
-    image: wolfgangofner/linuxsqlpackage:1.0
+    image: hoangbuison/linuxsqlpackage:1.0
   pipelines:
    - pipeline: CustomerApiBuild
      source: CustomerApi-CI
