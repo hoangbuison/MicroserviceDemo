@@ -19,7 +19,7 @@ variables:
   ClusterResourceGroup: MicroserviceDemo    
   ChartPath: '$(ArtifactName)/$(ArtifactName)/charts/$(ApiName)'
   HelmVersion: 3.5.0  
-  Repository: 'wolfgangofner/$(ApiName)' # '<YourACRName>.azurecr.io/<YourRepositoryName>' # replace with your repository  
+  Repository: 'hoangbuison/$(ApiName)' # '<YourACRName>.azurecr.io/<YourRepositoryName>' # replace with your repository  
   KubernetesCluster: 'microservice-aks'
   ReleaseValuesFile: '$(ChartPath)/values.yaml'    
 
